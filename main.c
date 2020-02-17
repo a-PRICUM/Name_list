@@ -4,7 +4,7 @@
 typedef struct{
   char name[32];
   int age;
-  char sex[4];
+  char sex[5];
 }person;
 
 
@@ -60,10 +60,9 @@ int main(void){
             if(strstr(file_name,".csv") == NULL){
               filetype = strstr(file_name,".");
               if(filetype != NULL){
-                *filetype = '\0';//////////////////////////////////
-                printf("%s\n",file_name);
+                *filetype = '\0';
               }
-              strcat(file_name,".csv");
+              strcat(file_name,".csv\0");
             }
 
             file = fopen("name_list.txt","r");
