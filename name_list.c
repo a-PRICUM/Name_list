@@ -81,25 +81,6 @@ int main(void){
   }
   return 0;
 }
-
-
-void print_person(person *data,int i){
-  printf("Person%2d:%3d歳 %s  %s\n",i,data->age,data->sex,data->name);
-  return;
-}
-void read_person(FILE *file,person *data){
-  fscanf(file,"%s%d%s",&data->name,&data->age,&data->sex);
-  return;
-}
-void gets_person(person *data){
-  printf("名前 >>");
-  scanf("%s",&data->name);
-  printf("年齢 >>");
-  scanf("%d",&data->age);
-  printf("性別 >>");
-  scanf("%s",&data->sex);
-  return;
-}
 void write_person(FILE *file,person *data){
   fprintf(file,"%s %d %s ",data->name,data->age,data->sex);
 }
