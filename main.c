@@ -4,7 +4,7 @@
 typedef struct{
   char name[32];
   int age;
-  char sex[5];
+  char sex[1];
 }person;
 
 
@@ -101,11 +101,11 @@ void read_person(FILE *file,person *data){
 }
 void gets_person(person *data){
   printf("名前 >>");
-  scanf("%s",&data->name);
+  scanf("%32s",&data->name);
   printf("年齢 >>");
   scanf("%d",&data->age);
   printf("性別 >>");
-  scanf("%s",&data->sex);
+  scanf("%1s",&data->sex);
   return;
 }
 void write_person(FILE *file,person *data){
